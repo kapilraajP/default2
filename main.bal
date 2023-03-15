@@ -1,5 +1,19 @@
 import ballerina/io;
 
-public function main() {
-    io:println("Hello, World!");
+type Employee record {
+    string name;
+    int age;
+    Person[] person;
+};
+
+
+type Person record {
+    string personName;
+    int age;
+};
+
+configurable Employee employee = ?;
+
+public function main() returns error? {
+    io:println(employee);
 }
