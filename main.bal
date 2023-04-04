@@ -3,13 +3,6 @@ import ballerina/io;
 type Employee record {
     string name;
     int age;
-    Person[] person;
-};
-
-
-type Person record {
-    string personName;
-    int age;
 };
 
 configurable Employee employee = ?;
