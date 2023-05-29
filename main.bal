@@ -1,17 +1,7 @@
 import ballerina/io;
 
-type Employee record {
-    string name;
-    int age;
-    Person[] names;
-};
-
-type Person record {
-    string personName;
-};
-
-configurable Employee employee = ?;
+configurable readonly & map<string[]> companyEmailRecipientsMapping = ?;
 
 public function main() returns error? {
-    io:println(employee);
+    io:println(companyEmailRecipientsMapping);
 }
