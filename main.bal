@@ -1,7 +1,7 @@
 import ballerina/io;
 
-configurable readonly & map<string[]> companyEmailRecipientsMapping = ?;
+configurable readonly & string testConfig = "Configuration";
 
 public function main() returns error? {
-    io:println(companyEmailRecipientsMapping);
+    io:println(testConfig);
 }
